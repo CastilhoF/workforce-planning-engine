@@ -1,0 +1,32 @@
+{
+  "tenant_id": "demo-organization",
+  "year": 2026,
+  "month": 6,
+  "teams": [
+    {
+      "team_code": "NORTH-DAY",
+      "required_headcount": 2,
+      "required_positions": [
+        { "position_id": "lead", "required_count": 1 }
+      ],
+      "base_id": "north",
+      "shift_minutes": 480,
+      "priority": 1
+    }
+  ],
+  "collaborators": [
+    {
+      "user_id": "demo-alex",
+      "position_id": "lead",
+      "base_ids": ["north"],
+      "scheduled_dates": ["2026-06-01", "2026-06-02"],
+      "team_affinity": { "NORTH-DAY": 2 }
+    },
+    {
+      "user_id": "demo-sam",
+      "position_id": "operator",
+      "base_ids": ["north"],
+      "scheduled_dates": ["2026-06-01", "2026-06-02"]
+    }
+  ]
+}

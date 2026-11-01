@@ -1,0 +1,20 @@
+services:
+  workforce-planning-engine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    container_name: workforce-planning-engine
+    env_file:
+      - path: ./.env
+        required: false
+    environment:
+      APP_ENV: ${APP_ENV:-local}
+      APP_HOST: ${APP_HOST:-0.0.0.0}
+      APP_PORT: ${APP_PORT:-8020}
+      PYTHONUNBUFFERED: "1"
+      WATCHFILES_FORCE_POLLING: "true"
+    ports:
+      - "${APP_PORT:-8020}:${APP_PORT:-8020}"
+    volumes:
+      - ./:/app

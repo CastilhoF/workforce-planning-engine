@@ -1,0 +1,12 @@
+.env
+.env.dev
+.env.prod
+.env.local
+.env.hml
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
